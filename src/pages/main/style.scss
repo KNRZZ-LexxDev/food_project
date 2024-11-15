@@ -1,0 +1,61 @@
+.mainPage{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    &__wrap {
+        width: 1280px;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    &__text-wrap{
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    &__text-head{
+        text-align: left;
+        font-size: 66px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+        margin: 0 0;
+    }   
+    &__text-head-part{
+        color: #FF7A50; 
+        font-size: 66px; 
+        font-family: "Rubik", "sans-serif";
+    }
+    &__text-desc{
+        text-align: left;
+        font-size: 20px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__button-wrap {
+        display: flex;
+        flex-direction: row;
+        margin-top: 45px;
+    }
+    &__button {
+        width: 163px;
+        height: 50px;
+        background: #FF7A50;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+        font-size: 20px;
+        font-family: "Rubik", "sans-serif";
+        margin-right: 50px;
+    }
+    &__link {
+        color: #363853;
+        font-size: 20px;
+        font-family: "Rubik", "sans-serif";
+        text-decoration: underline;
+        margin: auto 0;
+    }
+}

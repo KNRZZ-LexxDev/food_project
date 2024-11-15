@@ -1,0 +1,21 @@
+.restaurantSec{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    &__head-text {
+        font-size: 36px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__head-text-part{
+        font-size: 36px;
+        color: #FF7A50;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__card-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}

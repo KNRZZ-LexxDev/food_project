@@ -1,0 +1,60 @@
+.subscribeSec{
+    width: 70%;
+    height: 312px;
+    background: url('../../../img/subscribe_img/sub.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 124px auto auto auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: end;
+    &__input-containter{
+        width: 60%;
+        height: 78px;
+        background: #ffffff;
+        border-radius: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 56px auto;
+    }
+    &__input{
+        width: 50%;
+        height: 50%;
+        border-radius: 70px;
+        padding-left: 5px;
+        background: #ffffff;
+        border: none;
+        font-size: 18px;
+        margin-left: 47px;
+        margin-right: auto;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__button-wrap{
+        width: 192px;
+        height: 60px;
+        background: #FF7A50;
+        border-radius: 70px;
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+        margin-left: auto;
+        align-items: center;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__button-img{
+        width: 15px;
+        height: 15px;
+        background: url('../../../img/subscribe_img/send.png');
+        margin-right: 7px;
+    }
+    &__button-text{
+        color:#ffffff;
+        font-size: 20px;
+        font-family: "Rubik", "sans-serif";
+    }
+}

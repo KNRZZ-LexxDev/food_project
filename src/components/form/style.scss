@@ -1,0 +1,26 @@
+.formFeedBack {
+    width: 30%;
+    height: 70vh;
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px 70px 1px 70px;
+    margin: 25px auto;
+    &__button{
+        width: 176px;
+        height: 58px;
+        margin: 20px auto;
+        background: #FF7A50;
+        border: none;
+        border-radius: 30px 30px 1px 30px;
+        font-size: 20px;
+        color: #ffffff;
+        font-family: "Rubik", "sans-serif";
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

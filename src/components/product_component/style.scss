@@ -1,0 +1,44 @@
+.productCard{
+    width: 210px;
+    height: 279px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 13px;
+    &__img {
+        width: 144px;
+        height: 144px;
+    }
+    &__star {
+        width: 120px;
+        height: 20px;
+        background: url('../../img/components_img/products_img/star.png');
+        background-size: cover;
+    }
+    &__name{
+        font-size: 15px;
+        color: 363853px;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    &__cost {
+        font-size: 15px;
+        color: 363853px;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+    &__button {
+        background: #FF7A50;
+        width: 106px;
+        height: 32px;
+        border: none;
+        border-radius: 8px;
+        color: #ffffff;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

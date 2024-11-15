@@ -1,0 +1,17 @@
+.feedBackSec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 50px auto;
+    &__head {
+        font-size: 36px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+        &-part{
+            color: #FF7A50;
+        }
+    }
+}

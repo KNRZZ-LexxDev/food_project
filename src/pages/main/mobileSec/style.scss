@@ -1,0 +1,59 @@
+.mobileSec{
+    width: 80%;
+    height: auto;
+    margin: 165px auto auto auto;
+    display: flex;
+    flex-direction: row;
+    &__desc-wrap{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    &__desc-head{
+        text-align: left;
+        font-size: 36px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__desc-head-part{
+        font-size: 36px;
+        color: #FF7A50;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__desc-body{
+        text-align: left;
+        font-size: 20px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__desc-button-wrap{
+        display: flex;
+        flex-direction: row;
+
+    }
+    &__desc-ios-button{
+        width: 120px;
+        height: 40px;
+        background: url('../../../img/mobile_img/ios_button.png');
+        margin: 17px 17px 17px 0px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__desc-android-button{
+        width: 135px;
+        height: 40px;
+        background: url('../../../img/mobile_img/android_button.png');
+        margin: 17px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__desc-img{
+        width: 50%;
+        height: 480px;
+        background: url('../../../img/mobile_img/mobile_app.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

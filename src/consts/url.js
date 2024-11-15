@@ -1,0 +1,1 @@
+export const BASE_URL = "https://my-json-server.typicode.com/KNRZZ-LexxDev/fake_json"

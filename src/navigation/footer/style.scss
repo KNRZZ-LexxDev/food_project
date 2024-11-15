@@ -1,0 +1,134 @@
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    &__high-sec {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 122px auto auto auto;
+    }
+    &__main-block {
+        display: flex;
+        flex-direction: column;
+    }
+    &__logo{
+        width: 116px;
+        height: 39px;
+        background: url('../../img/header_img/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 29px;
+    }
+    &__mark-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+    &__mark-img_one {
+        width: 24px;
+        height: 24px;
+        background: url('../../img/footer_img/location.png');
+        margin-right: 7px;
+    }
+    &__mark-img_two {
+        width: 24px;
+        height: 24px;
+        background: url('../../img/footer_img/calling.png');
+        margin-right: 7px;
+    }
+    &__mark-img_three {
+        width: 24px;
+        height: 24px;
+        background: url('../../img/footer_img/message.png');
+        margin-right: 7px;
+    }
+    &__mark-text{
+        font-size: 16px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+    }
+    &__soc-wrap{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__facebook {
+        width: 39px;
+        height: 39px;
+        background: url('../../img/footer_img/facebook.png');
+        margin-right: 7px;
+    }
+    &__twitter {
+        width: 39px;
+        height: 39px;
+        background: url('../../img/footer_img/twitter.png');
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+    &__instagram {
+        width: 39px;
+        height: 39px;
+        background: url('../../img/footer_img/instagram.png');
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+    &__pinterest {
+        width: 39px;
+        height: 39px;
+        background: url('../../img/footer_img/pinterest.png');
+        margin-left: 7px;
+    }
+    &__inf-block{
+        display: flex;
+        flex-direction: column;
+    }
+    &__inf-head {
+        font-size: 18px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+        text-align: left;
+    }
+    &__inf-body-item {
+        font-size: 18px;
+        color: #363853;
+        font-family: "Rubik", "sans-serif";
+        text-align: left;
+    }
+    &__low-sec {
+        width: 67%;
+        height: auto;
+        margin-top: 52px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__low-sec-main-text{
+        font-size: 14px;
+        color: #646464;
+        font-family: "Rubik", "sans-serif";
+        margin-left: 0px;
+        margin-right: auto;
+    }
+    &__low-sec-option-wrap{
+        display: flex;
+        flex-direction: row;
+    }
+    &__low-sec-option-item{
+        font-size: 14px;
+        color: #646464;
+        font-family: "Rubik", "sans-serif";
+        margin: 0 25px;
+    }
+}

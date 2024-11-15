@@ -1,0 +1,19 @@
+.filterItem{
+    width: 210px;
+    height: 70px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px;
+    &__active  {
+        width: 210px;
+        height: 70px;
+        background: #FF7A50;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 13px;
+    }
+}

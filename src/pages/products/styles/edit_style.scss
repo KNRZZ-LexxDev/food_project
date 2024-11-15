@@ -1,0 +1,34 @@
+.productEdit{
+    width: 100%;
+    height: auto;
+    &__button-close {
+        width: 126px;
+        height: 58px;
+        margin: 20px auto;
+        background: #FF7A50;
+        border: none;
+        border-radius: 30px 30px 1px 30px;
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Rubik", "sans-serif";
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    &__button-add {
+        width: 126px;
+        height: 58px;
+        margin: 20px auto;
+        background: #FF7A50;
+        border: none;
+        border-radius: 30px 30px 1px 30px;
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Rubik", "sans-serif";
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
