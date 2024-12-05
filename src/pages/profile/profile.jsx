@@ -30,7 +30,7 @@ export const ProfilePage = () => {
 
         <FormFeedback/>
 
-        <button className="profilePage__log-out-button" onClick={() => logOutHandler()}>Log out</button>
+        <div className="profilePage__log-out-button" onClick={() => logOutHandler()}>Log out</div>
     </div>    
   );
 };

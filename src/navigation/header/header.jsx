@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../App";
@@ -8,33 +8,120 @@ import search from '../../img/header_img/search_icon.png'
 import basket from '../../img/header_img/basket_icon.png'
 
 export const Header = () => {
-    const navigate = useNavigate();
-    const { isAuth, setIsAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { isAuth, setIsAuth } = useContext(AuthContext);
+  const [isOpen, setOpen] = useState();
 
-    return (
-        <header className="header">
-            <div className="header__wrap">
+  function burgerCheck(isOpen) {
+    if (isOpen == true) {
+      setOpen(false)
+    }
+    else {
+      setOpen(true)
+    }
+  }
 
-                <div className="header__logo" onClick={() => console.log(isAuth)}>
-                    <img src={logo} />
-                </div>
+  function navHandler(route, isOpen) {
+    if (route == 'Home') {
+      navigate('/')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
 
-                <div className="header__link-wrap">
-                    <Link className="header__link" to={"/"}>Home</Link>
-                    {isAuth && <Link className="header__link" to={"/profile"}>Profile</Link>}
-                    {!isAuth && <Link className="header__link" to={"/auth"}>Auth</Link>}
-                    {isAuth && <Link className="header__link" to={"/list"}>List</Link>}
-                    {isAuth && <Link className="header__link" to={"/products"}>Products</Link>}
+    if (route == 'Register') {
+      navigate('/register')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
 
-                    <img src={search} className="header__search"></img>
+    if (route == 'Auth') {
+      navigate('/auth')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
 
-                    <img src={basket} className="header__basket"></img>
-                </div>
+    if (route == 'Profile') {
+      navigate('/profile')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
 
-                <button className="header__button" onClick={() =>  navigate("/register")}>Sign Up</button>
-            </div>
-        </header>
-    );
+    if (route == 'Products') {
+      navigate('/products')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
+
+    if (route == 'List') {
+      navigate('/list')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
+
+    if (route == 'Basket') {
+      navigate('/basket')
+      if (isOpen == true) {
+        burgerCheck(isOpen)
+      }
+    }
+
+
+
+
+  }
+
+  return (
+    <header className="header">
+      <div className="header__wrap">
+
+        <div className="header__logo" onClick={() => console.log(isAuth)}>
+          <img src={logo} />
+        </div>
+
+        <div className="header__link-wrap">
+          <Link className="header__link" to={"/"}>Home</Link>
+          {isAuth && <Link className="header__link" to={"/profile"}>Profile</Link>}
+          {!isAuth && <Link className="header__link" to={"/auth"}>Auth</Link>}
+          {isAuth && <Link className="header__link" to={"/list"}>List</Link>}
+          {isAuth && <Link className="header__link" to={"/products"}>Products</Link>}
+
+          <img src={search} className="header__search"></img>
+
+          <img src={basket} className="header__basket" onClick={() => navigate("/basket")}></img>
+
+          <button className="header__button" onClick={() => navigate("/register")}>Sign Up</button>
+        </div>
+
+
+        <div className='header__burger' onClick={() => { burgerCheck(isOpen) }}></div>
+
+
+
+        <div className={"header__mobile-wrap" + (isOpen ? '-Active' : '')}>
+          <div className="header__mobile__icon-wrap">
+            <img src={search} className="header__search"></img>
+
+            <img src={basket} className="header__basket" onClick={() => navHandler('Basket', isOpen)}></img>
+          </div>
+          <div className="header__mobile__link-wrap">
+            <p onClick={() => navHandler('Home', isOpen)} className='header__mobile-link-item'><b>Главная</b></p>
+            {!isAuth && <p onClick={() => navHandler('Register', isOpen)} className='header__mobile-link-item'><b>Регистрация</b></p>}
+            {!isAuth && <p onClick={() => navHandler('Auth', isOpen)} className='header__mobile-link-item'><b>Авторизация</b></p>}
+            {isAuth && <p onClick={() => navHandler('Profile', isOpen)} className='header__mobile-link-item'><b>Профиль</b></p>}
+            {isAuth && <p onClick={() => navHandler('Products', isOpen)} className='header__mobile-link-item'><b>Продукция</b></p>}
+            {/* {isAuth && <p onClick={() => navHandler('Order', isOpen)} className='header__mobile-link-item'><b>Заказ</b></p>} */}
+            {isAuth && <p onClick={() => navHandler('List', isOpen)} className='header__mobile-link-item'><b>Заказ</b></p>}
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;

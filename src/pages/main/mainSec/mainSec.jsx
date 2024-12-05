@@ -16,7 +16,7 @@ export const MainSec = () => {
                 </div>
 
                 <div className="mainSec__img-wrap">
-                    <img src={ScooterGuy}/>
+                    <img className="mainSec__img-item" src={ScooterGuy}/>
                 </div>
             </div>
         </div>

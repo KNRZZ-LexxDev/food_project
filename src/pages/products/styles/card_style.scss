@@ -1,4 +1,4 @@
-.foodCard{
+.foodCard {
     width: 33%;
     height: auto;
     display: flex;
@@ -6,34 +6,40 @@
     align-items: center;
     justify-content: center;
     margin-top: 100px;
-    &__inf-sec{
+
+    &__inf-sec {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    &__img{
+
+    &__img {
         width: 256px;
         height: 256px;
     }
-    &__name{
+
+    &__name {
         font-size: 24px;
         color: #363853;
         font-family: "Rubik", "sans-serif";
     }
-    &__cost{
+
+    &__cost {
         font-size: 24px;
         color: #363853;
-        font-family: "Rubik", "sans-serif"; 
+        font-family: "Rubik", "sans-serif";
     }
-    &__buttons-wrap{
+
+    &__buttons-wrap {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
-    &__delete-card{
+
+    &__delete-card {
         background: #363853;
         border: none;
         border-radius: 70px 70px 1px 70px;
@@ -42,11 +48,13 @@
         color: #FFFFFF;
         font-size: 24px;
         transition: transform 0.3s ease;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
         }
     }
-    &__edit-card{
+
+    &__edit-card {
         background: #FF7A50;
         border: none;
         border-radius: 70px 70px 1px 70px;
@@ -55,8 +63,301 @@
         color: #FFFFFF;
         font-size: 24px;
         transition: transform 0.3s ease;
-        &:hover{
+
+        &:hover {
             transform: scale(1.1);
         }
     }
+
+    @media (min-width: 992px) and (max-width: 1280px) {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+
+        &__inf-sec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__img {
+            width: 256px;
+            height: 256px;
+        }
+
+        &__name {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__cost {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__buttons-wrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        &__delete-card {
+            background: #363853;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__edit-card {
+            background: #FF7A50;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+
+        &__inf-sec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__img {
+            width: 256px;
+            height: 256px;
+        }
+
+        &__name {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__cost {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__buttons-wrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        &__delete-card {
+            background: #363853;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__edit-card {
+            background: #FF7A50;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+
+        &__inf-sec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__img {
+            width: 256px;
+            height: 256px;
+        }
+
+        &__name {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__cost {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__buttons-wrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        &__delete-card {
+            background: #363853;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__edit-card {
+            background: #FF7A50;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 479px) {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+
+        &__inf-sec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__img {
+            width: 256px;
+            height: 256px;
+        }
+
+        &__name {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__cost {
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__buttons-wrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        &__delete-card {
+            background: #363853;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &__edit-card {
+            background: #FF7A50;
+            border: none;
+            border-radius: 70px 70px 1px 70px;
+            width: 163px;
+            height: 50px;
+            color: #FFFFFF;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    @media (max-width: 320px) {}
+
+
 }

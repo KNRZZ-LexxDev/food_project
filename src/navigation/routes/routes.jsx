@@ -5,10 +5,11 @@ import { ErrorElement } from "../errorElement/errorElement";
 import { MainPage } from "../../pages/main/main";
 
 import { AuthPage } from "../../pages/auth/auth";
-import { ListPage } from "../../pages/list/list";
+import { ListPage } from "../../pages/list/listPage";
 import { ProductsPage } from "../../pages/products/products";
 import { RegisterPage } from "../../pages/register/register_page";
 import { ProfilePage } from "../../pages/profile/profile";
+import { BasketPage } from "../../pages/basket/basketPage";
 
 const AuthPages = [
     {
@@ -23,6 +24,10 @@ const AuthPages = [
         path: '/profile',
         Component: ProfilePage,
     },
+    {
+        path: '/basket',
+        Component: BasketPage,
+    }
 
 ]
 

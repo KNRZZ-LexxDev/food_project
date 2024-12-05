@@ -57,7 +57,7 @@ export const EditProduct = (props) => {
     return (
         <ReactModal isOpen={isModalOpen} style={customStyles}>
             <div className="productEdit">
-                <div>
+                <div className="productEdit__button-close-wrap">
                     <button className="productEdit__button-close"
                         onClick={() => {
                             onCloseModal({ status: false, id: null });
@@ -68,7 +68,7 @@ export const EditProduct = (props) => {
                     </button>
                 </div>
 
-                <div>
+                <div className="productEdit__interact-form-wrap">
                     {errorForm ? (
                         <div className="productEdit__error">Произошла ощибка изменения</div>
                     ) : (

@@ -1,59 +1,373 @@
-.mobileSec{
+.mobileSec {
     width: 80%;
     height: auto;
     margin: 165px auto auto auto;
     display: flex;
     flex-direction: row;
-    &__desc-wrap{
+
+    &__desc-wrap {
         display: flex;
         flex-direction: column;
         margin: auto;
     }
-    &__desc-head{
+
+    &__desc-head {
         text-align: left;
         font-size: 36px;
         color: #363853;
         font-family: "Rubik", "sans-serif";
     }
-    &__desc-head-part{
+
+    &__desc-head-part {
         font-size: 36px;
         color: #FF7A50;
         font-family: "Rubik", "sans-serif";
     }
-    &__desc-body{
+
+    &__desc-body {
         text-align: left;
         font-size: 20px;
         color: #363853;
         font-family: "Rubik", "sans-serif";
     }
-    &__desc-button-wrap{
+
+    &__desc-button-wrap {
         display: flex;
         flex-direction: row;
 
     }
-    &__desc-ios-button{
+
+    &__desc-ios-button {
         width: 120px;
         height: 40px;
         background: url('../../../img/mobile_img/ios_button.png');
         margin: 17px 17px 17px 0px;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
         }
     }
-    &__desc-android-button{
+
+    &__desc-android-button {
         width: 135px;
         height: 40px;
         background: url('../../../img/mobile_img/android_button.png');
         margin: 17px;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
         }
     }
-    &__desc-img{
+
+    &__desc-img {
         width: 50%;
         height: 480px;
         background: url('../../../img/mobile_img/mobile_app.png');
         background-size: contain;
         background-repeat: no-repeat;
     }
+
+    @media (min-width: 992px) and (max-width: 1280px) {
+        width: 100%;
+        height: auto;
+        margin: 165px auto auto auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &__desc-wrap {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        &__desc-head {
+            text-align: left;
+            font-size: 36px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-head-part {
+            font-size: 36px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-body {
+            text-align: left;
+            font-size: 20px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-button-wrap {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        &__desc-ios-button {
+            width: 120px;
+            height: 40px;
+            background: url('../../../img/mobile_img/ios_button.png');
+            margin: 17px 17px 17px 0px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-android-button {
+            width: 135px;
+            height: 40px;
+            background: url('../../../img/mobile_img/android_button.png');
+            margin: 17px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-img {
+            width: 50%;
+            height: 480px;
+            background: url('../../../img/mobile_img/mobile_app.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 100%;
+        height: auto;
+        margin: 165px auto auto auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &__desc-wrap {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        &__desc-head {
+            text-align: left;
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-head-part {
+            font-size: 24px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-body {
+            text-align: left;
+            font-size: 16px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-button-wrap {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        &__desc-ios-button {
+            width: 120px;
+            height: 40px;
+            background: url('../../../img/mobile_img/ios_button.png');
+            margin: 17px 17px 17px 0px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-android-button {
+            width: 135px;
+            height: 40px;
+            background: url('../../../img/mobile_img/android_button.png');
+            margin: 17px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-img {
+            width: 50%;
+            height: 480px;
+            background: url('../../../img/mobile_img/mobile_app.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        width: 100%;
+        height: auto;
+        margin: 165px auto auto auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        &__desc-wrap {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        &__desc-head {
+            text-align: left;
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-head-part {
+            font-size: 24px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-body {
+            text-align: left;
+            font-size: 16px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-button-wrap {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        &__desc-ios-button {
+            width: 120px;
+            height: 40px;
+            background: url('../../../img/mobile_img/ios_button.png');
+            margin: 17px 17px 17px 0px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-android-button {
+            width: 135px;
+            height: 40px;
+            background: url('../../../img/mobile_img/android_button.png');
+            margin: 17px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-img {
+            width: 100%;
+            height: 480px;
+            background: url('../../../img/mobile_img/mobile_app.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 479px) {
+        width: 100%;
+        height: auto;
+        margin: 165px auto auto auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        &__desc-wrap {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+        &__desc-head {
+            text-align: left;
+            font-size: 24px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+            padding-left: 25px;
+        }
+
+        &__desc-head-part {
+            font-size: 24px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__desc-body {
+            text-align: left;
+            font-size: 16px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+            padding-left: 25px;
+        }
+
+        &__desc-button-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        &__desc-ios-button {
+            width: 120px;
+            height: 40px;
+            background: url('../../../img/mobile_img/ios_button.png');
+            margin: 17px 17px 17px 0px;
+            
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-android-button {
+            width: 135px;
+            height: 40px;
+            background: url('../../../img/mobile_img/android_button.png');
+            margin: 17px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__desc-img {
+            width: 90%;
+            height: 480px;
+            background: url('../../../img/mobile_img/mobile_app.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    @media (max-width: 320px) {}
+
+
 }

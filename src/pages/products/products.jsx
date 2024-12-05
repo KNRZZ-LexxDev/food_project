@@ -54,7 +54,7 @@ export const ProductsPage = () => {
                     return(
                         <FoodCard
                             {...product}
-                            key={product.is}
+                            key={product.id}
                             name={product.title}
                             cost={product.cost}
                             image={product.img}

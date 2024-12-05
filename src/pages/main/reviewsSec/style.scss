@@ -1,43 +1,49 @@
-.reviewsSec{
+.reviewsSec {
     width: 80%;
     height: auto;
     margin: auto;
     margin-top: 160px;
-    &__head{
+
+    &__head {
         font-size: 36px;
         color: #363853;
         font-family: "Rubik", "sans-serif";
     }
-    &__head-part{
+
+    &__head-part {
         font-size: 36px;
         color: #FF7A50;
         font-family: "Rubik", "sans-serif";
     }
-    &__review-item{
+
+    &__review-item {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
     }
-    &__review-user{
+
+    &__review-user {
         width: 433px;
         height: 528px;
         margin-right: 68px;
     }
-    &__review-about-user{
+
+    &__review-about-user {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    &__review-text{
+
+    &__review-text {
         text-align: left;
         font-size: 20px;
         color: #363853;
         font-family: "Rubik", "sans-serif";
     }
 
-    &__review-user-footer{
+    &__review-user-footer {
         width: 100%;
         height: auto;
         display: flex;
@@ -45,7 +51,7 @@
         align-items: center;
     }
 
-    &__review-user-name{
+    &__review-user-name {
         color: #FF7A50;
         text-align: left;
         font-size: 20px;
@@ -53,7 +59,8 @@
         margin-left: 0;
         margin-right: auto;
     }
-    &__review-status{
+
+    &__review-status {
         color: #AAAAAA;
         text-align: left;
         font-size: 14px;
@@ -62,24 +69,426 @@
         margin-right: auto;
         margin-top: 0px;
     }
-    &__review-control-wrap{
+
+    &__review-control-wrap {
         display: flex;
         flex-direction: row;
     }
-    &__review-back{
+
+    &__review-back {
         width: 32px;
         height: 32px;
         background: url('../../../img/reviews_img/arrow_back.png');
         margin-right: 22px;
     }
-    &__review-next{
+
+    &__review-next {
         width: 32px;
         height: 32px;
         background: url('../../../img/reviews_img/arrow_next.png');
         margin-left: 22px;
     }
-    &__review-control-wrap{
+
+    &__review-control-wrap {
         margin-right: 0px;
         margin-left: auto;
     }
+
+    @media (min-width: 992px) and (max-width: 1280px) {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 160px;
+
+        &__head {
+            font-size: 36px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__head-part {
+            font-size: 36px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-item {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__review-user {
+            width: 433px;
+            height: 528px;
+            margin-right: 68px;
+        }
+
+        &__review-about-user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-text {
+            text-align: left;
+            font-size: 20px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-user-footer {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__review-user-name {
+            color: #FF7A50;
+            text-align: left;
+            font-size: 20px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &__review-status {
+            color: #AAAAAA;
+            text-align: left;
+            font-size: 14px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+
+        &__review-control-wrap {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__review-back {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_back.png');
+            margin-right: 22px;
+        }
+
+        &__review-next {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_next.png');
+            margin-left: 22px;
+        }
+
+        &__review-control-wrap {
+            margin-right: 0px;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 160px;
+
+        &__head {
+            font-size: 36px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__head-part {
+            font-size: 36px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-item {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-user {
+            width: 433px;
+            height: 528px;
+            margin-right: 0px;
+        }
+
+        &__review-about-user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-text {
+            text-align: left;
+            font-size: 20px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-user-footer {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__review-user-name {
+            color: #FF7A50;
+            text-align: left;
+            font-size: 20px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &__review-status {
+            color: #AAAAAA;
+            text-align: left;
+            font-size: 14px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+
+        &__review-control-wrap {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__review-back {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_back.png');
+            margin-right: 22px;
+        }
+
+        &__review-next {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_next.png');
+            margin-left: 22px;
+        }
+
+        &__review-control-wrap {
+            margin-right: 0px;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-width: 480px) and (max-width: 767px) {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 160px;
+
+        &__head {
+            font-size: 36px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__head-part {
+            font-size: 36px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-item {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-user {
+            width: 433px;
+            height: 528px;
+            margin-right: 0px;
+        }
+
+        &__review-about-user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-text {
+            text-align: left;
+            font-size: 14px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-user-footer {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__review-user-name {
+            color: #FF7A50;
+            text-align: left;
+            font-size: 20px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &__review-status {
+            color: #AAAAAA;
+            text-align: left;
+            font-size: 14px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+
+        &__review-control-wrap {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__review-back {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_back.png');
+            margin-right: 22px;
+        }
+
+        &__review-next {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_next.png');
+            margin-left: 22px;
+        }
+
+        &__review-control-wrap {
+            margin-right: 0px;
+            margin-left: auto;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 479px) {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-top: 160px;
+
+        &__head {
+            font-size: 36px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__head-part {
+            font-size: 36px;
+            color: #FF7A50;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-item {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-user {
+            width: 100%;
+            height: 528px;
+            margin-right: 0px;
+        }
+
+        &__review-about-user {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__review-text {
+            text-align: left;
+            font-size: 14px;
+            color: #363853;
+            font-family: "Rubik", "sans-serif";
+        }
+
+        &__review-user-footer {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__review-user-name {
+            color: #FF7A50;
+            text-align: left;
+            font-size: 20px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        &__review-status {
+            color: #AAAAAA;
+            text-align: left;
+            font-size: 14px;
+            font-family: "Rubik", "sans-serif";
+            margin-left: 0;
+            margin-right: auto;
+            margin-top: 0px;
+        }
+
+        &__review-control-wrap {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__review-back {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_back.png');
+            margin-right: 22px;
+        }
+
+        &__review-next {
+            width: 32px;
+            height: 32px;
+            background: url('../../../img/reviews_img/arrow_next.png');
+            margin-left: 22px;
+        }
+
+        &__review-control-wrap {
+            margin-right: 0px;
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width: 320px) {}
+
+
 }
