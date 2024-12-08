@@ -17,7 +17,7 @@ export const RestaurantSec = () => {
     }, [])
 
     return(
-        <div className="restaurantSec">
+        <div className="restaurantSec" style={{display: (restaurants.length === 0 ? 'none' : 'block')}}>
             <b><p className="restaurantSec__head-text"> Top Food <span className="restaurantSec__head-text-part"> Restaurant </span> </p></b>
 
             <div className="restaurantSec__card-wrap">

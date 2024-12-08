@@ -6,10 +6,12 @@ import './style.scss'
 import logo from '../../img/header_img/logo.png';
 import search from '../../img/header_img/search_icon.png'
 import basket from '../../img/header_img/basket_icon.png'
+import { AdminContext } from "../../context/admin-context";
 
 export const Header = () => {
   const navigate = useNavigate();
   const { isAuth, setIsAuth } = useContext(AuthContext);
+  const { isAdmin, setIsAdmin } = useContext(AdminContext);
   const [isOpen, setOpen] = useState();
 
   function burgerCheck(isOpen) {
@@ -70,17 +72,15 @@ export const Header = () => {
         burgerCheck(isOpen)
       }
     }
-
-
-
-
   }
+
+  let admin = JSON.parse(localStorage.getItem('admin'))
 
   return (
     <header className="header">
       <div className="header__wrap">
 
-        <div className="header__logo" onClick={() => console.log(isAuth)}>
+        <div className="header__logo" onClick={() => console.log(admin)}>
           <img src={logo} />
         </div>
 
@@ -89,7 +89,7 @@ export const Header = () => {
           {isAuth && <Link className="header__link" to={"/profile"}>Profile</Link>}
           {!isAuth && <Link className="header__link" to={"/auth"}>Auth</Link>}
           {isAuth && <Link className="header__link" to={"/list"}>List</Link>}
-          {isAuth && <Link className="header__link" to={"/products"}>Products</Link>}
+          {isAdmin && isAuth && <Link className="header__link" to={"/products"}>Admin</Link>}
 
           <img src={search} className="header__search"></img>
 
@@ -114,7 +114,7 @@ export const Header = () => {
             {!isAuth && <p onClick={() => navHandler('Register', isOpen)} className='header__mobile-link-item'><b>Регистрация</b></p>}
             {!isAuth && <p onClick={() => navHandler('Auth', isOpen)} className='header__mobile-link-item'><b>Авторизация</b></p>}
             {isAuth && <p onClick={() => navHandler('Profile', isOpen)} className='header__mobile-link-item'><b>Профиль</b></p>}
-            {isAuth && <p onClick={() => navHandler('Products', isOpen)} className='header__mobile-link-item'><b>Продукция</b></p>}
+            {isAdmin && isAuth && <p onClick={() => navHandler('Products', isOpen)} className='header__mobile-link-item'><b>Aдмин</b></p>}
             {/* {isAuth && <p onClick={() => navHandler('Order', isOpen)} className='header__mobile-link-item'><b>Заказ</b></p>} */}
             {isAuth && <p onClick={() => navHandler('List', isOpen)} className='header__mobile-link-item'><b>Заказ</b></p>}
           </div>

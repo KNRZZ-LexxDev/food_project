@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 import './style.scss'
 import { useContext } from "react";
 import { AuthContext } from "../../App";
+import { AdminContext } from "../../context/admin-context";
 
 
 export const AuthPage = () => {
     const { isAuth, setIsAuth } = useContext(AuthContext);
+    const { isAdmin, setIsAdmin } = useContext(AdminContext);
     const navigate = useNavigate();
 
     const {
@@ -19,13 +21,17 @@ export const AuthPage = () => {
 
     const onSubmit = (data) => {
         var userData = JSON.parse(localStorage.getItem('user'));
+        var adminData = JSON.parse(localStorage.getItem('admin'));
         console.log(userData)
         const {phone, password} = data
-        if (password == userData.user_pass && phone == userData.user_phone) {
+        if (password == adminData.admin_pass && phone == adminData.admin_phone) {
             setIsAuth(true);
-            console.log(isAuth)
+            setIsAdmin(true);
             navigate('/');
-        }
+        } else if (password == userData.user_pass && phone == userData.user_phone) {
+            setIsAuth(true);
+            navigate('/');
+        } 
     };
     
     return(  
@@ -37,7 +43,20 @@ export const AuthPage = () => {
                 name={"phone"}
                 label={"Телефон"}
                 // auth={auth}
-                validate={{required: true}}
+                validate={{
+                    required: true,
+                    minLength: {
+                        value: 2,
+                        message: 'Имя должно содержать минимум 2 символа'
+                    },
+                    maxLength: {
+                        value: 30,
+                        message: 'Имя не должно превышать 30 символов'
+                    },
+                    pattern: {
+                        value: /^[0-9]*$/i
+                    }
+                }}
                 placeholder="Введите телефон начиная с +"
                 type="text"
                 register={register}
@@ -48,7 +67,20 @@ export const AuthPage = () => {
                 name={"password"}
                 label={"Пароль"}
                 // auth={auth}
-                validate={{required: true}}
+                validate={{
+                    required: true,
+                    minLength: {
+                        value: 2,
+                        message: 'Имя должно содержать минимум 2 символа'
+                    },
+                    maxLength: {
+                        value: 30,
+                        message: 'Имя не должно превышать 30 символов'
+                    },
+                    pattern: {
+                        value: /^[A-Z0-9]*$/i
+                    }
+                }}
                 placeholder="Введите пароль"
                 type="password"
                 register={register}

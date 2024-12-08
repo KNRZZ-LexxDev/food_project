@@ -42,14 +42,14 @@ export const ProductsPage = () => {
     return (
         <div className="productPage">
 
-            <h1 className="productPage__head"> All Our <span className="productPage__head-part"> Products </span> </h1>
+            <h1 className="productPage__head" style={{display: (products.length === 0 ? 'none' : 'block')}}> All Our <span className="productPage__head-part"> Products </span> </h1>
 
-            <div className="productPage__add-product-wrap">
+            <div className="productPage__add-product-wrap" style={{display: (products.length === 0 ? 'none' : 'block')}}>
                 <button className="productPage__add-button" onClick={addProduct}>Add Product</button>
                 <span className="productPage__products-count">Products count: {products.length}</span>
             </div>
            
-            <div className="productPage__products-wrap">
+            <div className="productPage__products-wrap" style={{display: (products.length === 0 ? 'none' : 'flex')}}>
                 {products.map( (product) => {
                     return(
                         <FoodCard

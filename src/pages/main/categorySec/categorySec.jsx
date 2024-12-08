@@ -18,7 +18,7 @@ export const CategorySec = () => {
     }, [])
 
     return(
-        <div className="categorySec">
+        <div className="categorySec" style={{display: (foods.length === 0 ? 'none' : 'block')}}>
             <div className="categorySec__wrap">
 
                 <div className="categorySec__head-wrap">

@@ -39,7 +39,20 @@ export const RegisterPage = () => {
                     name={"name"}
                     label={"Имя"}
                     register={register}
-                    validate={{required: true}}
+                    validate={{
+                        required: true,
+                        minLength: {
+                            value: 2,
+                            message: 'Имя должно содержать минимум 2 символа'
+                        },
+                        maxLength: {
+                            value: 30,
+                            message: 'Имя не должно превышать 30 символов'
+                        },
+                        pattern: {
+                            value: /^[A-Z]*$/i
+                        }
+                    }}
                     placeholder="Введите имя"
                     type="text"
                 />
@@ -49,7 +62,20 @@ export const RegisterPage = () => {
                     name={"phone"}
                     label={"Телефон"}
                     register={register}
-                    validate={{required: true}}
+                    validate={{
+                        required: true,
+                        minLength: {
+                            value: 2,
+                            message: 'Имя должно содержать минимум 2 символа'
+                        },
+                        maxLength: {
+                            value: 30,
+                            message: 'Имя не должно превышать 30 символов'
+                        },
+                        pattern: {
+                            value: /^[0-9]*$/i
+                        }
+                    }}
                     placeholder="Введите телефон начиная с +"
                     type="text"
                 />
@@ -59,7 +85,20 @@ export const RegisterPage = () => {
                     name={"password"}
                     label={"Пароль"}
                     register={register}
-                    validate={{required: true}}
+                    validate={{
+                        required: true,
+                        minLength: {
+                            value: 2,
+                            message: 'Имя должно содержать минимум 2 символа'
+                        },
+                        maxLength: {
+                            value: 30,
+                            message: 'Имя не должно превышать 30 символов'
+                        },
+                        pattern: {
+                            value: /^[A-Z0-9]*$/i
+                        }
+                    }}
                     placeholder="Введите пароль"
                     type="password"
                 />
