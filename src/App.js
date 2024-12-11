@@ -6,14 +6,16 @@ import { FeedbackContext } from "./context/feedback-context";
 import { getAuth } from "./request/user_request";
 import { BasketContext } from './context/basket-contenx';
 import { AdminContext } from './context/admin-context';
+import { FeedBackContextItems } from './context/feedbackitems-context';
 
 
 export const AuthContext = createContext(null);
 
 export const App = () => {
 
-  const [isAuth, setIsAuth] = useState(false);
+  const [feedBackItems, setFeedBackItems] = useState([]);
   const [feedbackForm, setFeedbackForm] = useState({});
+  const [isAuth, setIsAuth] = useState(false);
   const [basket, setBasket] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
   const routes = getRoutes(isAuth);
@@ -32,13 +34,15 @@ export const App = () => {
 
   return (
     <div className="App">
-      <AdminContext.Provider value={{isAdmin, setIsAdmin}}>
+      <AdminContext.Provider value={{ isAdmin, setIsAdmin }}>
         <AuthContext.Provider value={{ isAuth, setIsAuth }}>
-          <FeedbackContext.Provider value={{ feedbackForm, setFeedbackForm }}>
-            <BasketContext.Provider value={{ basket, setBasket }}>
-              <RouterProvider router={routes} />
-            </BasketContext.Provider>
-          </FeedbackContext.Provider>
+          <FeedBackContextItems.Provider value={{ feedBackItems, setFeedBackItems }}>
+            <FeedbackContext.Provider value={{ feedbackForm, setFeedbackForm }}>
+              <BasketContext.Provider value={{ basket, setBasket }}>
+                <RouterProvider router={routes} />
+              </BasketContext.Provider>
+            </FeedbackContext.Provider>
+          </FeedBackContextItems.Provider>
         </AuthContext.Provider>
       </AdminContext.Provider>
     </div>

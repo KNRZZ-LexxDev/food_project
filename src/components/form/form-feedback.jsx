@@ -3,9 +3,11 @@ import { TextInput } from "../inputs_components/text-input/text-input";
 import { useContext, useEffect } from "react";
 import { FeedbackContext } from "../../context/feedback-context";
 import './style.scss'
+import { FeedBackContextItems } from "../../context/feedbackitems-context";
 
 export const FormFeedback = (props) => {
   const { feedbackForm, setFeedbackForm } = useContext(FeedbackContext);
+  const { feedBackItems, setFeedBackItems } = useContext(FeedBackContextItems);
 
   const defaultData = { name: "", phone: "", description: "" };
 
@@ -21,6 +23,17 @@ export const FormFeedback = (props) => {
   const onSubmit = (data) => {
     setFeedbackForm(data);
 
+    setFeedBackItems(prevItems => {
+      return [...(prevItems || []), { // Обрабатываем null/undefined
+        'user_name': data.name,
+        'user_phone': data.phone,
+        'user_description': data.description,
+        'isPending': false,
+      }];
+    });
+    
+    console.log(feedBackItems);
+
     reset({
       name: "",
       phone: "",
@@ -30,7 +43,7 @@ export const FormFeedback = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="formFeedBack">
+    <form onSubmit={handleSubmit(onSubmit)} className="formFeedBack" onClick={() => console.log(feedBackItems)}>
       <TextInput
         label={"Имя"}
         errors={errors}
@@ -83,11 +96,8 @@ export const FormFeedback = (props) => {
             message: 'Имя должно содержать минимум 2 символа'
           },
           maxLength: {
-            value: 30,
+            value: 90,
             message: 'Имя не должно превышать 30 символов'
-          },
-          pattern: {
-            value: /^[A-Z]*$/i
           }
         }}
       />

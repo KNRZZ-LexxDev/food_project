@@ -1,6 +1,19 @@
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .basketPage {
     width: 100%;
     height: auto;
+    transform: translateY(50px); /* Начальное смещение вниз */
+    animation: slideIn 1s forwards; /* Запуск анимации */
 
     &__head {
         color: #363853;
@@ -11,7 +24,7 @@
 
     &__empty-wrap {
         width: 100%;
-        height: 100vh;
+        height: 70vh;
         display: flex;
         justify-content: center;
         align-items: center;

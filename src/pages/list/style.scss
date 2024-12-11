@@ -1,6 +1,19 @@
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .listPage {
     width: 100%;
     height: auto;
+    transform: translateY(50px); /* Начальное смещение вниз */
+    animation: slideIn 1s forwards; /* Запуск анимации */
 
     &__wrap {
         width: 100%;

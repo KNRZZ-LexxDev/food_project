@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ScooterGuy from '../../img/header_img/content_img.png';
 import './style.scss'
 import { MainSec } from "./mainSec/mainSec";
@@ -9,8 +9,16 @@ import { MobileSec } from "./mobileSec/mobileSec";
 import { ReviewsSec } from "./reviewsSec/reviewsSec";
 import { SubscribeSec } from "./subscribeSec/subscribeSec";
 import { FeedBackSec } from "./feedBackSec/feedBackSec";
+import { AuthContext } from "../../App";
+
 
 export const MainPage = () => {
+    const {isAuth, setIsAuth} = useContext(AuthContext);
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [])
+
     return(
         <div className="mainPage">
             <MainSec/>
@@ -20,7 +28,7 @@ export const MainPage = () => {
             <MobileSec/>
             <ReviewsSec/>
             <SubscribeSec/>
-            <FeedBackSec/>
+            {isAuth && <FeedBackSec/>}
         </div>
     );
 };

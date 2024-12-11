@@ -52,8 +52,8 @@ export const Header = () => {
       }
     }
 
-    if (route == 'Products') {
-      navigate('/products')
+    if (route == 'Admin') {
+      navigate('/admin')
       if (isOpen == true) {
         burgerCheck(isOpen)
       }
@@ -89,7 +89,7 @@ export const Header = () => {
           {isAuth && <Link className="header__link" to={"/profile"}>Profile</Link>}
           {!isAuth && <Link className="header__link" to={"/auth"}>Auth</Link>}
           {isAuth && <Link className="header__link" to={"/list"}>List</Link>}
-          {isAdmin && isAuth && <Link className="header__link" to={"/products"}>Admin</Link>}
+          {isAdmin && isAuth && <Link className="header__link" to={"/admin"}>Admin</Link>}
 
           <img src={search} className="header__search"></img>
 
@@ -114,7 +114,7 @@ export const Header = () => {
             {!isAuth && <p onClick={() => navHandler('Register', isOpen)} className='header__mobile-link-item'><b>Регистрация</b></p>}
             {!isAuth && <p onClick={() => navHandler('Auth', isOpen)} className='header__mobile-link-item'><b>Авторизация</b></p>}
             {isAuth && <p onClick={() => navHandler('Profile', isOpen)} className='header__mobile-link-item'><b>Профиль</b></p>}
-            {isAdmin && isAuth && <p onClick={() => navHandler('Products', isOpen)} className='header__mobile-link-item'><b>Aдмин</b></p>}
+            {isAdmin && isAuth && <p onClick={() => navHandler('Admin', isOpen)} className='header__mobile-link-item'><b>Aдмин</b></p>}
             {/* {isAuth && <p onClick={() => navHandler('Order', isOpen)} className='header__mobile-link-item'><b>Заказ</b></p>} */}
             {isAuth && <p onClick={() => navHandler('List', isOpen)} className='header__mobile-link-item'><b>Заказ</b></p>}
           </div>

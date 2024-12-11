@@ -44,6 +44,7 @@ export const BasketPage = () => {
             });
             setBasket([]); // Очищаем корзину
             setIsModalOpen(true); // Открываем модальное окно
+            window.scrollTo(0,0);
         } else {
             alert("Имя пользователя не найдено. Пожалуйста, добавьте его в localStorage.");
         }

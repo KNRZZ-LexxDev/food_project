@@ -10,15 +10,13 @@ import { ProductsPage } from "../../pages/products/products";
 import { RegisterPage } from "../../pages/register/register_page";
 import { ProfilePage } from "../../pages/profile/profile";
 import { BasketPage } from "../../pages/basket/basketPage";
+import { AdminPage } from "../../pages/admin/adminPage";
+import { FeedBackPage } from "../../pages/feedBack/feedBackPage";
 
 const AuthPages = [
     {
         path: '/list',
         Component: ListPage,
-    },
-    {
-        path: '/products',
-        Component: ProductsPage,
     },
     {
         path: '/profile',
@@ -27,7 +25,20 @@ const AuthPages = [
     {
         path: '/basket',
         Component: BasketPage,
-    }
+    },
+    {
+        path: '/products',
+        Component: ProductsPage,
+    },
+    {
+        path: '/feedbacks',
+        Component: FeedBackPage,
+    },
+    {
+        path: '/admin',
+        Component: AdminPage,
+    },
+    
 
 ]
 

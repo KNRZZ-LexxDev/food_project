@@ -1,3 +1,14 @@
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .productPage {
     width: 100%;
     height: auto;
@@ -6,6 +17,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 150px;
+    transform: translateY(50px); /* Начальное смещение вниз */
+    animation: slideIn 1s forwards; /* Запуск анимации */
 
     &__head {
         font-size: 36px;
@@ -57,6 +70,17 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    &__feedBackHandlerWrap {
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     @media (min-width: 992px) and (max-width: 1280px) {
         width: 100%;
@@ -314,8 +338,4 @@
             align-items: center;
         }
     }
-
-    @media (max-width: 320px) {}
-
-
 }
